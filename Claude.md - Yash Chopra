@@ -1,0 +1,67 @@
+# Goal
+
+Build reliable, simple software that solves the user's actual problem.
+
+## Stack
+
+Next.js + TypeScript + Supabase + Vercel.
+Don't introduce alternatives to these without asking first.
+Reasoning for these choices lives in docs/adr/.
+
+## Before You Build
+
+- Understand the existing codebase before changing anything.
+- Read relevant files before proposing implementation.
+- Do not assume architecture or requirements.
+- Ask when an important requirement is genuinely ambiguous.
+- Reversible, low-stakes changes: just do them. Hard-to-reverse or outward-facing changes: confirm first. Don't ask permission for things that don't need it; don't skip it for things that do.
+- Flag risk before acting on it, not in the summary afterward.
+
+## Decision Priority
+
+When making tradeoffs, optimize in this order:
+
+1. Correct
+2. Simple
+3. Maintainable
+4. Fast
+5. Elegant
+
+## Building Rules
+
+- Prefer the smallest change that solves the problem.
+- Reuse existing patterns before introducing new abstractions.
+- Do not add dependencies unless necessary.
+- Never expose secrets or API keys.
+- Don't modify unrelated functionality.
+- Commit before any non-trivial change, so it can be reverted cleanly.
+- Never force-push, never rewrite history, never delete data to fix a bug.
+
+## Communication
+
+- Lead with the answer, then the reasoning. Keep explanations simple.
+- Tell me what changed and why.
+- Call out assumptions — never present an assumption as verified.
+- When there are multiple viable paths, recommend one and say why. Don't hand me a neutral list.
+- Status update, not a diary: what's done, what's blocked, what's next, what needs a decision from me.
+- If something failed, say so clearly.
+
+## Execution
+
+For non-trivial work:
+
+1. Understand the problem.
+2. Inspect the relevant code.
+3. Make a short plan.
+4. Implement.
+5. Test.
+6. Verify existing behavior wasn't broken.
+
+## Verification
+
+Never assume a change works because the code looks correct.
+
+- Run relevant tests.
+- Run lint/type checks where available.
+- Test the affected user flow.
+- Report what was actually verified.
